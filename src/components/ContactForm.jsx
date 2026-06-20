@@ -68,12 +68,12 @@ function ContactForm() {
 
       {enviado && (
         <div className="contact-success">
-          ✅ Mensaje enviado correctamente. ¡Gracias por escribir!
+          Mensaje enviado correctamente.
         </div>
       )}
 
       <form className="contact-form" onSubmit={handleSubmit}>
-        <div>
+        <div className="contact-field">
           <input
             className="contact-input"
             type="text"
@@ -85,7 +85,7 @@ function ContactForm() {
           {errores.nombre && <p className="contact-error">{errores.nombre}</p>}
         </div>
 
-        <div>
+        <div className="contact-field">
           <input
             className="contact-input"
             type="email"
@@ -97,7 +97,7 @@ function ContactForm() {
           {errores.correo && <p className="contact-error">{errores.correo}</p>}
         </div>
 
-        <div>
+        <div className="contact-field">
           <input
             className="contact-input"
             type="text"
@@ -109,7 +109,7 @@ function ContactForm() {
           {errores.asunto && <p className="contact-error">{errores.asunto}</p>}
         </div>
 
-        <div>
+        <div className="contact-field">
           <textarea
             className="contact-input contact-textarea"
             name="mensaje"
