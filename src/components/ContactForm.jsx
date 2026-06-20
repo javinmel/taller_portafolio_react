@@ -52,6 +52,19 @@ function ContactForm() {
       className={`contact reveal ${visible ? 'reveal-visible' : ''}`}
     >
       <h2 className="contact-title">Contacto</h2>
+      <p className="contact-subtitle">¿Prefieres un contacto directo? Aquí me encuentras:</p>
+
+      <div className="contact-links">
+        <a href="mailto:javierinmel2025@gmail.com" className="contact-link">
+          Correo
+        </a>
+        <a href="https://github.com/javinmel" target="_blank" rel="noopener noreferrer" className="contact-link">
+          GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/luis-javier-pineda-lezcano" target="_blank" rel="noopener noreferrer" className="contact-link">
+          LinkedIn
+        </a>
+      </div>
 
       {enviado && (
         <div className="contact-success">

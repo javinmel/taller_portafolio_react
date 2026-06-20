@@ -11,6 +11,37 @@
   color: #7c6af7;
 }
 
+.contact-subtitle {
+  text-align: center;
+  color: #a0a0b0;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.contact-link {
+  background-color: #1e1e2e;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  border: 1px solid #2e2e4e;
+  font-size: 0.9rem;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.contact-link:hover {
+  border-color: #7c6af7;
+  transform: translateY(-2px);
+}
+
 .contact-form {
   display: flex;
   flex-direction: column;
