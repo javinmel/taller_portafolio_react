@@ -25,7 +25,7 @@ function AboutSection() {
           </p>
           <p className="about-paragraph">
             He construido más de 8 herramientas de automatización en producción, varias con
-            interfaces gráficas (tkinter), integración con Excel vía macros y COM, y análisis
+            interfaces gráficas (tkinter), integración con Excel vía macros, y análisis
             geoespacial para validación de rutas. Fuera del entorno laboral, desarrollo proyectos
             personales como aplicaciones móviles con React Native y dashboards de análisis de
             datos con Python y PostgreSQL.
