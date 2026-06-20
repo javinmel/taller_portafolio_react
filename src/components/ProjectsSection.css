@@ -1,6 +1,6 @@
 .projects {
   padding: 4rem 2rem;
-  background-color: #1e1e2e;
+  background: linear-gradient(180deg, #1e1e2e 0%, #1c1c30 100%);
   color: #fff;
 }
 

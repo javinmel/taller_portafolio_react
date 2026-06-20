@@ -1,54 +1,62 @@
-import { useState } from "react";
-import "./ContactForm.css";
+import { useState } from 'react'
+import './ContactForm.css'
+import '../hooks/scrollReveal.css'
+import { useScrollReveal } from '../hooks/useScrollReveal'
 
 function ContactForm() {
   const [form, setForm] = useState({
-    nombre: "",
-    correo: "",
-    asunto: "",
-    mensaje: "",
-  });
+    nombre: '',
+    correo: '',
+    asunto: '',
+    mensaje: ''
+  })
 
-  const [errores, setErrores] = useState({});
-  const [enviado, setEnviado] = useState(false);
+  const [errores, setErrores] = useState({})
+  const [enviado, setEnviado] = useState(false)
+  const [ref, visible] = useScrollReveal()
 
   function handleChange(e) {
-    setForm({ ...form, [e.target.name]: e.target.value });
-    setErrores({ ...errores, [e.target.name]: "" });
+    setForm({ ...form, [e.target.name]: e.target.value })
+    setErrores({ ...errores, [e.target.name]: '' })
   }
 
   function validar() {
-    const nuevosErrores = {};
-    if (!form.nombre.trim()) nuevosErrores.nombre = "El nombre es obligatorio";
+    const nuevosErrores = {}
+    if (!form.nombre.trim()) nuevosErrores.nombre = 'El nombre es obligatorio'
     if (!form.correo.trim()) {
-      nuevosErrores.correo = "El correo es obligatorio";
+      nuevosErrores.correo = 'El correo es obligatorio'
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.correo)) {
-      nuevosErrores.correo = "El correo no tiene un formato válido";
+      nuevosErrores.correo = 'El correo no tiene un formato válido'
     }
-    if (!form.asunto.trim()) nuevosErrores.asunto = "El asunto es obligatorio";
-    if (!form.mensaje.trim())
-      nuevosErrores.mensaje = "El mensaje es obligatorio";
-    return nuevosErrores;
+    if (!form.asunto.trim()) nuevosErrores.asunto = 'El asunto es obligatorio'
+    if (!form.mensaje.trim()) nuevosErrores.mensaje = 'El mensaje es obligatorio'
+    return nuevosErrores
   }
 
   function handleSubmit(e) {
-    e.preventDefault();
-    const erroresEncontrados = validar();
+    e.preventDefault()
+    const erroresEncontrados = validar()
     if (Object.keys(erroresEncontrados).length > 0) {
-      setErrores(erroresEncontrados);
-      return;
+      setErrores(erroresEncontrados)
+      return
     }
-    setEnviado(true);
-    setForm({ nombre: "", correo: "", asunto: "", mensaje: "" });
-    setErrores({});
+    setEnviado(true)
+    setForm({ nombre: '', correo: '', asunto: '', mensaje: '' })
+    setErrores({})
   }
 
   return (
-    <section id="contacto" className="contact">
+    <section
+      id="contacto"
+      ref={ref}
+      className={`contact reveal ${visible ? 'reveal-visible' : ''}`}
+    >
       <h2 className="contact-title">Contacto</h2>
 
       {enviado && (
-        <div className="contact-success">✅ Mensaje enviado correctamente.</div>
+        <div className="contact-success">
+          ✅ Mensaje enviado correctamente. ¡Gracias por escribir!
+        </div>
       )}
 
       <form className="contact-form" onSubmit={handleSubmit}>
@@ -96,9 +104,7 @@ function ContactForm() {
             value={form.mensaje}
             onChange={handleChange}
           />
-          {errores.mensaje && (
-            <p className="contact-error">{errores.mensaje}</p>
-          )}
+          {errores.mensaje && <p className="contact-error">{errores.mensaje}</p>}
         </div>
 
         <button type="submit" className="contact-button">
@@ -106,7 +112,7 @@ function ContactForm() {
         </button>
       </form>
     </section>
-  );
+  )
 }
 
-export default ContactForm;
+export default ContactForm

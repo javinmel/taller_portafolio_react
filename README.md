@@ -14,7 +14,7 @@ Instalación y ejecución
 
 Clona el repositorio y entra a la carpeta del proyecto:
 
-bashgit clone https://github.com/tu-usuario/portfolio-react.git
+bashgit clone https://github.com/javinmel/taller_portafolio_react.git
 cd portfolio-react
 
 Instala las dependencias:
