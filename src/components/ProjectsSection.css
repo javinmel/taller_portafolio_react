@@ -1,0 +1,29 @@
+.projects {
+  padding: 4rem 2rem;
+  background-color: #1e1e2e;
+  color: #fff;
+}
+
+.projects-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #7c6af7;
+}
+
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+@media (max-width: 600px) {
+  .projects {
+    padding: 3rem 1.5rem;
+  }
+
+  .projects-title {
+    font-size: 1.6rem;
+  }
+}

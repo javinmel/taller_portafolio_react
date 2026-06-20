@@ -1,0 +1,32 @@
+[
+    {
+      "id": "p1",
+      "title": "Programador Maestro INMEL",
+      "category": "Python",
+      "level": "Laboral",
+      "description": "Automatización de asignación de lectores a rutas de medición para 20 ciclos de facturación usando tkinter y pandas.",
+      "technologies": ["Python", "pandas", "tkinter", "Excel"],
+      "repositoryUrl": "",
+      "demoUrl": ""
+    },
+    {
+      "id": "p2",
+      "title": "Dashboard Análisis de Lecturas",
+      "category": "Data",
+      "level": "Académico",
+      "description": "Dashboard interactivo para analizar patrones de falla en lecturas de medidores usando PostgreSQL y Streamlit.",
+      "technologies": ["Python", "PostgreSQL", "Streamlit", "Plotly"],
+      "repositoryUrl": "",
+      "demoUrl": ""
+    },
+    {
+      "id": "p3",
+      "title": "App de Finanzas Personales",
+      "category": "React Native",
+      "level": "Personal",
+      "description": "Aplicación móvil con cuatro pantallas para gestión de finanzas personales con almacenamiento local SQLite.",
+      "technologies": ["React Native", "Expo", "SQLite"],
+      "repositoryUrl": "",
+      "demoUrl": ""
+    }
+  ]

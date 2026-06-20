@@ -1,0 +1,18 @@
+.footer {
+  background-color: #1e1e2e;
+  color: #a0a0b0;
+  text-align: center;
+  padding: 2rem;
+  border-top: 1px solid #2e2e4e;
+}
+
+.footer-text {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.footer-sub {
+  margin: 0.5rem 0 0;
+  font-size: 0.8rem;
+  color: #7c6af7;
+}
